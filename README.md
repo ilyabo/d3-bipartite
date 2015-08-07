@@ -100,8 +100,14 @@ The result of the layout will look like:
       
 # Future work
 
-Implement crossing minimization. Related:
+Implement crossing minimization:
  [1](https://books.google.ch/books?id=W6hqCQAAQBAJ&lpg=PA101&ots=a5Z6eE-91k&dq=layer%20by%20layer%20sweep%20crossing&pg=PA107#v=onepage&q=layer%20by%20layer%20sweep%20crossing&f=false),
  [2](http://www2.isikun.edu.tr/personel/cesimerten/wolfsubmission_112.pdf),
  [3](http://sydney.edu.au/engineering/it/~visual/valacon/pdf/lanbo_crossing.pdf),
  [4](http://ira.informatik.uni-freiburg.de/papers/2003/1_eschbach_guenther_becker.pdf)
+
+
+# Related
+
+Check out this nice [interactive bipartite example](http://bl.ocks.org/NPashaP/raw/9796212/) 
+(not using this library).
