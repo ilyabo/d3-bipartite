@@ -16,5 +16,6 @@
   "author": "Ilya Boyandin",
   "dependencies": {
     "d3": "3.x.x"
-  }
+  },
+  "license": "MIT"
 }
