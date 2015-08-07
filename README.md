@@ -2,7 +2,7 @@
 
 A [D3](http://d3js.org/) layout for drawing weighted bipartite graphs:
 
-<img src="doc/example.png" style="width:250px">
+<img src="example.png" style="width:250px">
  
  
 
