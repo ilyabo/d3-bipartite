@@ -107,7 +107,9 @@ Implement crossing minimization:
  [4](http://ira.informatik.uni-freiburg.de/papers/2003/1_eschbach_guenther_becker.pdf)
 
 
-# Related
+# Related work
 
-Check out this nice [interactive bipartite example](http://bl.ocks.org/NPashaP/raw/9796212/) 
+* Nice [interactive bipartite example](http://bl.ocks.org/NPashaP/raw/9796212/) 
 (not using this library).
+* [Rendering a bipartite graph](http://pedroj.github.io/d3Network_test/d3Network_files/widget2_markup.html) 
+  using [D3 sankey plugin](https://github.com/d3/d3-plugins/tree/master/sankey).
