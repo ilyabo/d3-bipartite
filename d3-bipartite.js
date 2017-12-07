@@ -1,4 +1,6 @@
-var d3 = require('d3');
+var d3Array = require('d3-array');
+var d3Collection = require('d3-collection');
+var d3Interpolate = require('d3-interpolate');
 
 function defaultSource(d) { return d.source; }
 function defaultTarget(d) { return d.target; }
@@ -6,24 +8,24 @@ function defaultValue(d) { return d.value; }
 function nodeValue(d) { return d.value }
 
 function nodeTotals(flows, accessor) {
-  var nodes = d3.nest()
+  var nodes = d3Collection.nest()
     .key(accessor)
     .entries(flows);
 
   nodes.forEach(function(node) {
-    node.value = d3.sum(node.values, nodeValue);
-    node.max = d3.max(node.values, nodeValue);
+    node.value = d3Array.sum(node.values, nodeValue);
+    node.max = d3Array.max(node.values, nodeValue);
   });
 
   // sort nodes by their max flow values
-  nodes.sort(function(a, b) { return d3.descending(a.max, b.max) });
+  nodes.sort(function(a, b) { return d3Array.descending(a.max, b.max) });
 
   return nodes;
 }
 
 function layout(nodes, padding, x, height, side, y0, k) {
   var i, node, h,
-      y = y0 + (height - padding * (nodes.length - 1) - d3.sum(nodes, nodeValue) * k)/2;
+      y = y0 + (height - padding * (nodes.length - 1) - d3Array.sum(nodes, nodeValue) * k)/2;
 
   for (i = 0; i < nodes.length; i++) {
     node = nodes[i];
@@ -38,13 +40,13 @@ function layout(nodes, padding, x, height, side, y0, k) {
 }
 
 function scaleK(nodes, height, padding) {
-  return (height - padding * (nodes.length - 1)) / d3.sum(nodes, nodeValue);
+  return (height - padding * (nodes.length - 1)) / d3Array.sum(nodes, nodeValue);
 }
 
 function link(d, curvature) {
    var x0 = d.start.x,
        x1 = d.end.x,
-       xi = d3.interpolateNumber(x0, x1),
+       xi = d3Interpolate.interpolateNumber(x0, x1),
        x2 = xi(curvature),
        x3 = xi(1 - curvature),
        y0 = d.start.y + d.thickness / 2,
@@ -101,7 +103,7 @@ module.exports = function() {
       targets: targets
     };
   };
-    
+
   bipartite.width = function(_) {
     return arguments.length ? (width = _, bipartite) : width;
   };
