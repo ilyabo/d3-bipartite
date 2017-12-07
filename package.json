@@ -1,21 +1,23 @@
 {
   "name": "d3-bipartite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A D3 layout for drawing weighted bipartite graphs.",
   "keywords": [
-      "d3",
-      "layout",
-      "bipartite",
-      "graph layout",
-      "flows",
-      "od",
-      "origin-destination",
-      "infovis"
+    "d3",
+    "layout",
+    "bipartite",
+    "graph layout",
+    "flows",
+    "od",
+    "origin-destination",
+    "infovis"
   ],
   "main": "d3-bipartite.js",
   "author": "Ilya Boyandin",
   "dependencies": {
-    "d3": "3.x.x"
+    "d3-array": "^1.2.1",
+    "d3-collection": "^1.0.4",
+    "d3-interpolate": "^1.1.6"
   },
   "license": "MIT"
 }
