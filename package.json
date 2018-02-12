@@ -1,6 +1,6 @@
 {
   "name": "d3-bipartite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A D3 layout for drawing weighted bipartite graphs.",
   "keywords": [
     "d3",
