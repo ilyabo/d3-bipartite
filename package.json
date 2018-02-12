@@ -13,6 +13,7 @@
     "infovis"
   ],
   "main": "d3-bipartite.js",
+  "types": "d3-bipartite.d.ts",
   "author": "Ilya Boyandin",
   "dependencies": {
     "d3-array": "^1.2.1",
