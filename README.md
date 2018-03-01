@@ -4,7 +4,7 @@ A [D3](http://d3js.org/) layout for drawing weighted bipartite graphs:
 
 <img src="example.png" style="width:250px">
  
-[Interactive example](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph)
+Interactive examples: [one](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph), [two](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph-colored-by-source)
 
 Usage:
 
