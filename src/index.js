@@ -1,6 +1,6 @@
-var d3Array = require('d3-array');
-var d3Collection = require('d3-collection');
-var d3Interpolate = require('d3-interpolate');
+import * as d3Array from 'd3-array';
+import * as d3Collection from 'd3-collection';
+import * as d3Interpolate from 'd3-interpolate';
 
 function defaultSource(d) { return d.source; }
 function defaultTarget(d) { return d.target; }
@@ -57,7 +57,7 @@ function link(d, curvature) {
         + " " + x1 + "," + y1;
 }
 
-module.exports = function() {
+export default function() {
 
   var source = defaultSource,
       target = defaultTarget,

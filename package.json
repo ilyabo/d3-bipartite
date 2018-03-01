@@ -1,6 +1,6 @@
 {
   "name": "d3-bipartite",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "A D3 layout for drawing weighted bipartite graphs.",
   "keywords": [
     "d3",
@@ -12,7 +12,7 @@
     "origin-destination",
     "infovis"
   ],
-  "main": "d3-bipartite.js",
+  "main": "dist/d3-bipartite.js",
   "types": "d3-bipartite.d.ts",
   "author": "Ilya Boyandin",
   "dependencies": {
@@ -20,5 +20,13 @@
     "d3-collection": "^1.0.4",
     "d3-interpolate": "^1.1.6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.52.3",
+    "uglify-js": "^3.3.12"
+  },
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && rollup -c",
+    "prepublishOnly": "npm run build && uglifyjs -b beautify=false dist/d3-bipartite.js -c -m -o dist/d3-bipartite.min.js"
+  }
 }
