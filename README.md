@@ -2,10 +2,11 @@
 
 A [D3](http://d3js.org/) layout for drawing weighted bipartite graphs:
 
+Live examples (on Observable): [simple](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph), [colored by source](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph-colored-by-source)
+
+
 <img src="example.png" style="width:250px">
  
-Interactive examples: [one](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph), [two](https://beta.observablehq.com/@ilyabo/weighted-bipartite-graph-colored-by-source)
-
 Usage:
 
       var bipartite = require('d3-bipartite');
