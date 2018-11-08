@@ -50,10 +50,12 @@ function link(d, curvature) {
        x2 = xi(curvature),
        x3 = xi(1 - curvature),
        y0 = d.start.y + d.thickness / 2,
-       y1 = d.end.y + d.thickness / 2;
+       y1 = d.end.y + d.thickness / 2,
+       // path will not display if y0 and y1 are equal
+       cp2 = y0 == y1 ? y1 + 0.0001 : y1;
    return "M" + x0 + "," + y0
         + "C" + x2 + "," + y0
-        + " " + x3 + "," + y1
+        + " " + x3 + "," + cp2
         + " " + x1 + "," + y1;
 }
 
